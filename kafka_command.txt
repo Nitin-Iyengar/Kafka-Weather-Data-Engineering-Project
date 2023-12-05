@@ -1,0 +1,51 @@
+
+Command Referred URL :- https://cloudinfrastructureservices.co.uk/how-to-setup-apache-kafka-server-on-azure-aws-gcp/
+
+Start the Kafka Environment:
+-------------------------------
+
+cd /opt/kafka/
+bin/zookeeper-server-start.sh config/zookeeper.properties
+
+
+Start the Kafka Broker Service:
+----------------------------------------
+
+cd /opt/kafka/
+bin/kafka-server-start.sh config/server.properties
+
+
+Modify server.properties to use a Public IP:
+----------------------------------------------------
+
+Since kafka broker server is pointing to private server, changed the server.properties so that it can run on public IP
+To do this , I followed below command
+
+sudo nano config/server.properties (changed the  "advertised.listeners" property to public IP of the VM.)
+
+
+Create a Kafka topic:
+-----------------------------
+
+cd /opt/kafka/
+sudo bin/kafka-topics.sh --create --topic weather_data --bootstrap-server 34.121.184.86:9092 --replication-factor 1 --partitions 1
+
+
+Describe the Created Topic:
+-----------------------------
+
+sudo bin/kafka-topics.sh --describe --topic weather_data --bootstrap-server 34.121.184.86:9092 -- to describe created topic
+
+
+Start a Kafka Producer:
+--------------------------
+
+cd /opt/kafka/
+sudo bin/kafka-console-producer.sh --topic weather_data --bootstrap-server 34.121.184.86:9092
+
+
+Start a Kafka Consumer:
+-------------------------
+
+cd /opt/kafka/
+sudo bin/kafka-console-consumer.sh --topic weather_data --from-beginning --bootstrap-server 34.121.184.86:9092
