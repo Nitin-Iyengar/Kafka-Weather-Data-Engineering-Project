@@ -42,6 +42,7 @@ For this project, I'm utilizing the Weather API to collect real-time data for va
 
 3. **Setting Up Firewall Rule:**
    - Created an Ingress firewall rule to enable access to the Kafka server from the local machine.
+
      [Using IAP for TCP forwarding](https://cloud.google.com/iap/docs/using-tcp-forwarding#firewall).
 
 
