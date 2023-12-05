@@ -15,7 +15,7 @@ consumer = KafkaConsumer(
     value_deserializer=lambda x: loads(x.decode('utf-8')))
 
 # Load your service account credentials
-SERVICE_ACCOUNT_KEY_FILE = "D:/Kafka_Project/kafka_user.json"
+SERVICE_ACCOUNT_KEY_FILE = "D:/Service Accounts/kafka_user.json"
 credentials = service_account.Credentials.from_service_account_file(
     SERVICE_ACCOUNT_KEY_FILE,
     scopes=["https://www.googleapis.com/auth/cloud-platform"]

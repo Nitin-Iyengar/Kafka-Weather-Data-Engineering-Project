@@ -4,6 +4,7 @@ from json import dumps
 import requests
 import random
 import time
+import json
 
 
 producer = KafkaProducer(bootstrap_servers=['34.121.184.86:9092'],
@@ -13,10 +14,15 @@ cities = ['Mumbai', 'Chennai', 'Kolkata', 'Bengaluru', 'Delhi', 'Hyderabad', 'Co
           'Amritsar', 'Bhopal', 'Bhubaneswar', 'Chandigarh', 'Faridabad', 'Ghaziabad', 'Jamshedpur', 'Jaipur',
           'Kochi', 'Lucknow', 'Nagpur', 'Patna', 'Raipur', 'Surat', 'Visakhapatnam', 'Agra', 'Ajmer', 'Kanpur', 'Mysuru', 'Srinagar']
 
+file_path = r"D:\Service Accounts\weather_api_key.json"  # Use raw string or forward slashes
+
+with open(file_path) as f:
+    api_key_data = json.load(f)
+    weather_api_key = api_key_data['weather_api_key']
 
 
 def fetch_weather_data(city):
-    api_url = f"http://api.weatherapi.com/v1/current.json?key=36d6b6dfa90741efa0e193320232411&q={city}&aqi=yes"
+    api_url = f"http://api.weatherapi.com/v1/current.json?key={weather_api_key}&q={city}&aqi=yes"
     response = requests.get(api_url)
 
     if response.status_code == 200:

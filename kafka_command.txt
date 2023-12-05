@@ -28,24 +28,24 @@ Create a Kafka topic:
 -----------------------------
 
 cd /opt/kafka/
-sudo bin/kafka-topics.sh --create --topic weather_data --bootstrap-server 34.121.184.86:9092 --replication-factor 1 --partitions 1
+sudo bin/kafka-topics.sh --create --topic weather_data --bootstrap-server {Put the Public IP of your GCP VM Instance:9092} --replication-factor 1 --partitions 1
 
 
 Describe the Created Topic:
 -----------------------------
 
-sudo bin/kafka-topics.sh --describe --topic weather_data --bootstrap-server 34.121.184.86:9092 -- to describe created topic
+sudo bin/kafka-topics.sh --describe --topic weather_data --bootstrap-server {Put the Public IP of your GCP VM Instance:9092} -- to describe created topic
 
 
 Start a Kafka Producer:
 --------------------------
 
 cd /opt/kafka/
-sudo bin/kafka-console-producer.sh --topic weather_data --bootstrap-server 34.121.184.86:9092
+sudo bin/kafka-console-producer.sh --topic weather_data --bootstrap-server {Put the Public IP of your GCP VM Instance:9092}
 
 
 Start a Kafka Consumer:
 -------------------------
 
 cd /opt/kafka/
-sudo bin/kafka-console-consumer.sh --topic weather_data --from-beginning --bootstrap-server 34.121.184.86:9092
+sudo bin/kafka-console-consumer.sh --topic weather_data --from-beginning --bootstrap-server {Put the Public IP of your GCP VM Instance:9092}
