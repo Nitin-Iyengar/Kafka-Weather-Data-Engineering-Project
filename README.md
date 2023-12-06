@@ -87,7 +87,7 @@ For this project, I'm utilizing the Weather API to collect real-time data for va
 
 
 
-[Link to Dashboard](https://app.powerbi.com/view?r=eyJrIjoiOGMxZjNkNDgtZmU1YS00ZjYyLWJjNDctOTA2M2Q5NjIyMTE0IiwidCI6IjZjYmRjMDU2LWZiZWEtNDFiYS05YzY0LTUyYmY0ZjQ4N2I4ZSIsImMiOjEwfQ%3D%3D&pageName=ReportSection)
+[Link to Dashboard](https://app.powerbi.com/view?r=eyJrIjoiOTMzNWYyYzgtMmI0Mi00ZjBjLWI5MDEtMmY5YTRlMjMyMjc0IiwidCI6IjZjYmRjMDU2LWZiZWEtNDFiYS05YzY0LTUyYmY0ZjQ4N2I4ZSIsImMiOjEwfQ%3D%3D)
 
 
 
