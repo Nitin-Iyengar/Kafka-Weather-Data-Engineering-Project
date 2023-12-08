@@ -1,6 +1,6 @@
 # Real-Time Weather Data Engineering with Kafka
 
-Access my project files here - [Kafka-Weather-Data-Engineering-Project](https://github.com/Nitin0909/Kafka-Weather-Data-Engineering-Project)
+Access my project files here - [Kafka-Weather-Data-Engineering-Project](https://github.com/Nitin-Iyengar/Kafka-Weather-Data-Engineering-Project)
 
 ## Introduction
 
